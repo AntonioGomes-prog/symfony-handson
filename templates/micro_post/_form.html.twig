@@ -1,0 +1,33 @@
+
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<div>{{ form_errors(form) }}</div>
+
+<div>
+    {{ form_label(form.title, 'Please enter the title', {
+        'label_attr': {'class': 'block text-sm text-gray-700 dark:text-gray-300 font-medium'}
+    }) }}
+    {{ form_widget(form.title, {'attr': {'class': 'border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full'}}) }}
+        {% for error in form.title.vars.errors %}
+            <p class="text-red-500 text-sm dark:text-red-400">{{ error.message }}</p>
+        {% endfor %}
+    </p>
+</div>
+
+<div>
+    {{ form_label(form.text, 'Please enter the post text', {
+        'label_attr': {'class': 'block text-sm text-gray-700 dark:text-gray-300 font-medium'}
+    }) }}
+    {{ form_widget(form.text, {'attr': {'class': 'border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full'}}) }}
+    {% for error in form.text.vars.errors %}
+        <p class="text-red-500 text-sm dark:text-red-400">{{ error.message }}</p>
+    {% endfor %}
+</div>
+
+{{ form_rest(form) }}
+
+<div class="mt-4">
+    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 dark:hover:bg-blue-400">
+        Save!
+    </button>
+</div>
+{{ form_end(form) }}

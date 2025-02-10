@@ -13,7 +13,7 @@ class UserProfileType extends AbstractType
             ->add('name')
             ->add('bio')
             ->add('websiteUrl')
-            ->add('twitterUsername')
+            ->add('XUsername')
             ->add('company')
             ->add('location')
             ->add(

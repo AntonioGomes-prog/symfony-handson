@@ -8,20 +8,16 @@
 <form action="{{ path('app_login') }}" method="POST">
     <div>
         <label class="'class': 'block text-sm text-gray-700 dark:text-gray-300 font-medium'">Email</label>
-        <input type="text" name="_username" value="{{ lastUsername }}" class="border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full"/>
+        <input type="email" name="email" value="{{ lastUsername }}" class="border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full"/>
     </div>
 
     <div>
         <label class="'class': 'block text-sm text-gray-700 dark:text-gray-300 font-medium'">Password</label>
-        <input type="password" name="_password" class="border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full"/>
+        <input type="password" name="password" class="border-gray-300 dark:bg-white dark:text-black focus:ring focus:ring-blue-500 rounded-md w-full"/>
     </div>
 
     <input type="hidden" name="_target_path" value="/micro-post" />
     <br>
     <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 dark:hover:bg-blue-400">Login</button>
 </form>
-
-<div class="mt-2 text-center text-gray-600 dark:text-gray-400">
-    Don't have an account? <a href="{{ path('app_register') }}">Register here</a>
-</div>
 {% endblock %}

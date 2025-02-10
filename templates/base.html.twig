@@ -10,12 +10,7 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <script>
-            tailwind.config = {
-                darkMode: 'class'
-            }
-        </script>
+        <link href="{{ asset('css/output.css') }}" rel="stylesheet">
     </head>
     <body class="bg-gray-100 text-gray-800 m-10 dark:bg-gray-800 dark:text-white">
         <div class="w-full md:-2/3 mx-auto mb-4 flex justify-between items-center">
